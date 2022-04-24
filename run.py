@@ -104,6 +104,12 @@ def main():
         print("You don't seem to have any credentials saved yet")
         print("\n")
 
+    elif short_code == "ex":
+      print(f"Bye {user_name}...")
+      break
+    else:
+      print("I did not get that, please use the short codes")
+
 if __name__ == '__main__':
   main()
 
