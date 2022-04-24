@@ -53,7 +53,7 @@ def main():
   print("\n")
  
   while True:
-    print("Use these short codes : cc - create new credential, dc - display all credentials, ex - exit credential list ")
+    print("Use these short codes : cc - create new credential, dc - display all credentials, delc - delete credentials, ex - exit credential list ")
     
     short_code = input().lower()
 
@@ -103,6 +103,19 @@ def main():
         print("\n")
         print("You don't seem to have any credentials saved yet")
         print("\n")
+    
+    elif short_code == "delc":
+      print("Delete Credentials")
+      print("*"*20)
+
+      print("App name e.g Twitter, Instagram ....")
+      app_name = input()
+
+      if app_name == display_credentials.app_name: #delete credentials
+        delete_credentials(app_name)
+        print("\n")
+        print(f"Credentials deleted")
+      print("\n")
 
     elif short_code == "ex":
       print(f"Bye {user_name}...")
