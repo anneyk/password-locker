@@ -43,6 +43,8 @@ def main():
     password_count = int(input("How many passwords would you like to generate: "))
     for x in range(0, password_count):
       password = ""
+      for x in range(0, password_len):
+        password_char = random.choice(Chars)
 
 
 if __name__ == '__main__':
