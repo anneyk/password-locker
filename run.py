@@ -1,4 +1,5 @@
 from password import Credentials
+import random
 
 def create_user(app_name, user_name, password):
   '''
