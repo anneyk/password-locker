@@ -27,8 +27,12 @@ def display_credentials():
 
 def main():
   first_message = input("Hello, Welcome to Password Locker. Do you already have a password locker account? (Y/N) ")
-  print(first_message)
 
+  
+  if first_message == "Y":
+    print("Great!")
+    input("Please enter your username: ")
+    input("Please enter your password: ")
 
 if __name__ == '__main__':
   main()
