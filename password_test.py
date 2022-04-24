@@ -6,7 +6,7 @@ class TestCredentials (unittest.TestCase):
     '''
     Set up method to run before each test cases
     '''
-    self.new_credentials = Credentials("Password-locker-account","Hellen","myPassword") #create a password locker account object
+    self.new_credentials = Credentials("Password-locker-account","Hellen","myPassword") #create credentials object
 
   def test_init(self):
     '''
@@ -15,7 +15,6 @@ class TestCredentials (unittest.TestCase):
     self.assertEqual(self.new_credentials.app_name,"Password-locker-account")
     self.assertEqual(self.new_credentials.user_name,"Hellen")
     self.assertEqual(self.new_credentials.password, "myPassword")
-  
 
   def tearDown(self):
     '''
@@ -38,7 +37,17 @@ class TestCredentials (unittest.TestCase):
     test_credentials = Credentials("Twitter", "Hellie_","myTwitterPassword") #new account credentials
     test_credentials.store_credentials()
     self.assertEqual(len(Credentials.credentials_list),2)
-
+  
+  def test_delete_credentials(self):
+    '''
+    test_delete_credentials to test if we can remove credentials from our credentials list
+    '''
+    self.new_credentials.store_credentials()
+    test_credentials = Credentials("Test app","new username","password") #new credentials
+    test_credentials.store_credentials()
+    self.new_credentials.delete_credentials()#Delete credentials object
+    self.assertEqual(len(Credentials.credentials_list),1)
+    
 
 if __name__ == '__main__':
   unittest.main()
