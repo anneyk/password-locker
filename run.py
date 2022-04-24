@@ -1,8 +1,6 @@
 from password import Credentials
 import random
 
-Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*&^()"
-
 def create_user(app_name, user_name, password):
   '''
   function to create new password locker user
@@ -37,6 +35,14 @@ def main():
     print('\n')
     user_name = input("Please enter your username: ")
     password = input("Please enter your password: ")
+
+  Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*&^()"
+
+  while 1:
+    password_len = int(input("What length would you like your password to be: "))
+    password_count = int(input("How many passwords would you like to generate: "))
+
+
 
 if __name__ == '__main__':
   main()
