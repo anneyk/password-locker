@@ -1,3 +1,4 @@
+from yaml import serialize
 from password import Credentials
 import random
 
@@ -130,18 +131,19 @@ def main():
     
     
     elif short_code == "delc":
-      print("Delete Credentials")
-      print("*"*20)
-
-      print("App name e.g Twitter, Instagram ....")
-      app_name = input()
-
-      if app_name == display_credentials.app_name: #delete credentials
-        delete_credentials(app_name)
+      print("Enter the account name you want to delete")
+      print("*"*50)
+      search_name = input().lower()
+      if find_credentials(search_name):
+        search_credentials = find_credentials(search_name)
+        print("*"*50)
+        search_credentials.delete_credentials()
         print("\n")
-        print(f"Credentials deleted")
-      print("\n")
-
+        print(f"Your stored information for: {search_credentials.app_name} successfully deleted!")
+        print("\n")
+      else:
+        print("The credentials you want to delete does not exit in your credentials list")
+      
     elif short_code == "ex":
       print(f"Bye {user_name}...")
       break
