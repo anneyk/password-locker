@@ -24,3 +24,12 @@ def display_credentials():
   Function that returns all the stored credentials
   ''' 
   return Credentials.display_credentials()
+
+def main():
+  first_message = input("Hello, Welcome to Password Locker. Do you already have a password locker account? (Y/N) ")
+  print(first_message)
+
+
+if __name__ == '__main__':
+  main()
+
