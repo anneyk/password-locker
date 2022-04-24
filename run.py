@@ -45,7 +45,9 @@ def main():
       password = ""
       for x in range(0, password_len):
         password_char = random.choice(Chars)
-
+        password = password + password_char
+      print("Here is your random password: ", password)
+      
 
 if __name__ == '__main__':
   main()
