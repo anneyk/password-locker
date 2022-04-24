@@ -71,8 +71,8 @@ class TestCredentials (unittest.TestCase):
     self.new_credentials.store_credentials()
     test_credentials = Credentials("app-name","username","password")
     test_credentials.store_credentials()
-    Credentials_exist = Credentials.credentials_exists("app-name")
-    self.assertTrue(Credentials_exist)
+    credentials_exist = Credentials.credentials_exist("app-name")
+    self.assertTrue(credentials_exist)
 
 if __name__ == '__main__':
   unittest.main()
