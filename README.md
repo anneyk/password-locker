@@ -12,14 +12,20 @@ It also stores the passwords and generates passwords for the user if the user ch
   -pyperclip
  # Cloning
  -Open Terminal
+ 
  -$ git clone https://github.com/anneyk/password-locker.git
+ 
  -$ cd password-locker
+ 
  -$ code . or $ atom . to open the text editor
  # Running the application
  To run the application, open the cloned folder in terminal.
- $ chmod +x run.py
+ 
+ -$ chmod +x run.py
+ 
  To run the application test
- $ python3 password_test.py
+ 
+ -$ python3 password_test.py
  # Technologies used
  Python3.6.9
  # Contact information
