@@ -27,7 +27,7 @@ def display_credentials():
   return Credentials.display_credentials()
 
 def main():
-  first_message = input("Hello, Welcome to Password Locker. Do you already have a password locker account? (Y/N) ")
+  first_message = input("Hello, Welcome to Password Locker. Do you already have a password locker account? (Y/N) ").upper()
   print('\n')
   
   if first_message == "Y":
@@ -35,6 +35,20 @@ def main():
     print('\n')
     user_name = input("Please enter your username: ")
     password = input("Please enter your password: ")
+    print("\n")
+    print("Login successful!")
+
+    
+  else:
+    print("Follow the instructions to create a password locker account")
+    print('\n')
+    input("Enter your username: ")
+    input("Enter password: ")
+    print("\n")
+    print("account successfully created!!")
+
+
+
 
   Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*&^()"
 
@@ -47,7 +61,7 @@ def main():
         password_char = random.choice(Chars)
         password = password + password_char
       print("Here is your random password: ", password)
-      
+
 
 if __name__ == '__main__':
   main()
