@@ -18,4 +18,9 @@ def delete_credentials(credential):
   function to delete credentials
   '''
   credential.delete_credentials()
-  
+
+def display_credentials():
+  '''
+  Function that returns all the stored credentials
+  ''' 
+  return Credentials.display_credentials()
