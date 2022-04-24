@@ -14,3 +14,9 @@ class Credentials:
     store_credentials method stores credentials objects into the credentials_list
     '''
     Credentials.credentials_list.append(self)
+
+  def delete_credentials(self):
+    '''
+    delete_credentials method deletes stored credentials from the credentials_list
+    '''
+    Credentials.credentials_list.remove(self)
