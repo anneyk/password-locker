@@ -56,7 +56,7 @@ def main():
   else:
     print("Follow the instructions to create a password locker account")
     print('\n')
-    input("Enter your username: ")
+    user_name = input("Enter your username: ")
     input("Enter password: ")
     print("\n")
     print("account successfully created!")
