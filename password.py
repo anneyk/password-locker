@@ -9,3 +9,8 @@ class Credentials:
     self.user_name = user_name
     self.password = password
 
+  def store_credentials(self):
+    '''
+    store_credentials method stores credentials objects into the credentials_list
+    '''
+    Credentials.credentials_list.append(self)
