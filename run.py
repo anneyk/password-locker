@@ -1,3 +1,4 @@
+from jmespath import search
 from password import Credentials
 import random
 
@@ -53,7 +54,7 @@ def main():
   print("\n")
  
   while True:
-    print("Use these short codes : cc - create new credential, dc - display all credentials, delc - delete credentials, ex - exit credential list ")
+    print("Use these short codes : cc - create new credential, dc - display all credentials, fc - find credentials, delc - delete credentials, ex - exit credential list ")
     
     short_code = input().lower()
 
@@ -103,6 +104,19 @@ def main():
         print("\n")
         print("You don't seem to have any credentials saved yet")
         print("\n")
+    
+    elif short_code == "fc":
+      print("Enter the app name account you want to search for")
+
+      search_app_name = input()
+      if check_existing_app_name(search_app_name:
+        search_appl_name = find_credential(search_app_name)
+        print(f"{search_appl_name.user_name} {search_appl_name.password}")
+        print("*"*50)
+      else:
+        print("That app name account does not exist")
+    
+    
     
     elif short_code == "delc":
       print("Delete Credentials")
