@@ -20,7 +20,7 @@ class TestCredentials (unittest.TestCase):
     '''
     test_store_account_credentials test case to test if the credentials object is stored into the credentials_list
     '''
-    self.new_credentials.store_credetials() #store the new credentials
+    self.new_credentials.store_credentials() #store the new credentials
     self.assertEqual(len(Credentials.credentials_list),1)
 
 if __name__ == '__main__':
