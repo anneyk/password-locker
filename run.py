@@ -110,7 +110,7 @@ def main():
         print("\n")
 
         for credential in display_credentials():
-          print(f"{credential.app_name} {credential.user_name} {credential.password}")
+          print(f"App name: {credential.app_name}") | print(f"Username: {credential.user_name}") | print(f"Password: {credential.password}")
         print("\n")
       else:
         print("\n")
@@ -123,7 +123,8 @@ def main():
       search_app_name = input()
       if check_existing_app_name(search_app_name):
         search_appl_name = find_credentials(search_app_name)
-        print(f"{search_appl_name.user_name} {search_appl_name.password}")
+        print(f"Your username is: {search_appl_name.user_name}")
+        print(f"Your password is: {search_appl_name.password}")
         print("*"*50)
       else:
         print("That app name account does not exist")
