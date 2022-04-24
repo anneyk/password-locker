@@ -1,3 +1,6 @@
+import pyperclip
+
+
 class Credentials:
   '''
   Class creates new instance of user password locker account class
@@ -46,3 +49,8 @@ class Credentials:
       if credential.app_name == app_name:
         return True
     return False
+  
+  @classmethod
+  def copy_password(cls, app_name):
+    credentials_found = Credentials.find_by_app_name(app_name)
+    pyperclip.copy(credentials_found.password)

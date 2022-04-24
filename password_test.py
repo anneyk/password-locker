@@ -76,13 +76,5 @@ class TestCredentials (unittest.TestCase):
     credentials_exist = Credentials.credentials_exist("app-name")
     self.assertTrue(credentials_exist)
   
-  def test_copy_credentials(self):
-    '''
-    test to confirm that we are copying the credentials 
-    '''
-    self.new_credentials.store_credentials()
-    Credentials.copy_credentials("app-name","username","password")
-    self.assertEqual(self.new_credentials.credentials, pyperclip.paste())
-
 if __name__ == '__main__':
   unittest.main()
