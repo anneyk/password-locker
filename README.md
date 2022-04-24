@@ -3,7 +3,7 @@ Password Locker
 # Author 
 Annet Khavere
 # Description
-This an appliaction that manages the logging in credentials of a user with multiple accounts.
+This an application that manages the logging in credentials of a user with multiple accounts.
 It also stores the passwords and generates passwords for the user if the user chooses not to create a password manually.
 # Installation/Setup instruction
 ## This application requires:
