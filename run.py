@@ -45,7 +45,8 @@ def main():
     input("Enter your username: ")
     input("Enter password: ")
     print("\n")
-    print("account successfully created!!")
+    print("account successfully created!")
+    print("\n")
 
 
 
