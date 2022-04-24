@@ -31,6 +31,7 @@ It also stores the passwords and generates passwords for the user if the user ch
  # Contact information
  For any enquiries, email me at khavereannet@gmail.com
  # License
- MIT License:
- Copyright (c) <a href = "https://github.com/anneyk">Annet Khavere</a>
+ MIT License
+ 
+ Copyright (c) 2022 <a href = "https://github.com/anneyk">Annet Khavere</a>
  
