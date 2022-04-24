@@ -1,4 +1,3 @@
-from jmespath import search
 from password import Credentials
 import random
 
@@ -20,6 +19,18 @@ def delete_credentials(credential):
   function to delete credentials
   '''
   credential.delete_credentials()
+
+def find_credentials(app_name):
+  '''
+  function that finds credentials by app name and returns the app name
+  '''
+  return Credentials.find_by_app_name(app_name)
+
+def check_existing_app_name(app_name):
+  '''
+  function that checks if credentials exist with that app_name and returns a boolean
+  '''
+  return Credentials.credentials_exist(app_name)
 
 def display_credentials():
   '''
@@ -109,8 +120,8 @@ def main():
       print("Enter the app name account you want to search for")
 
       search_app_name = input()
-      if check_existing_app_name(search_app_name:
-        search_appl_name = find_credential(search_app_name)
+      if check_existing_app_name(search_app_name):
+        search_appl_name = find_credentials(search_app_name)
         print(f"{search_appl_name.user_name} {search_appl_name.password}")
         print("*"*50)
       else:
