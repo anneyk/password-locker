@@ -1,6 +1,8 @@
 from password import Credentials
 import random
 
+Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*&^()"
+
 def create_user(app_name, user_name, password):
   '''
   function to create new password locker user
