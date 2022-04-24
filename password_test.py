@@ -54,6 +54,14 @@ class TestCredentials (unittest.TestCase):
     '''
     self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
-
+  def test_find_credential_by_app_name(self):
+    '''
+    test to check if we can find an account credentials by app name and display information
+    '''
+    self.new_credentials.store_credentials()
+    test_credentials = Credentials("app-name","username","password")
+    test_credentials.store_credentials()
+    found_credentials = Credentials.find_by_app_name("app-name")
+    self.assertEqual(found_credentials.user_name, test_credentials.user_name)
 if __name__ == '__main__':
   unittest.main()
