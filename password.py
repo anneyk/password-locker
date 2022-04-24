@@ -27,3 +27,12 @@ class Credentials:
     method that returns the credentials list
     '''
     return cls.credentials_list
+  
+  @classmethod
+  def find_by_app_name(cls,app_name):
+    '''
+    Method that takes in an app name and returns a contact that matches that number.
+    '''
+    for credential in cls.credentials_list:
+      if credential.app_name == app_name:
+        return credential
