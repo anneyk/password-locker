@@ -37,6 +37,7 @@ def main():
     password = input("Please enter your password: ")
     print("\n")
     print("Login successful!")
+    print("\n")
 
     
   else:
@@ -48,7 +49,7 @@ def main():
     print("account successfully created!")
     print("\n")
 
-
+  print(f"Hello {user_name}, What would you like to do ")
 
 
   Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*&^()"
