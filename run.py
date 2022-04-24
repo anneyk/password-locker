@@ -86,11 +86,23 @@ def main():
               print("\n")
             print("Here is your random password: ", password)
        
-        store_credentials(create_new_credentials(app_name,user_name,password)) #create and save new credentials
-        print("\n")
-        print(f"New Credentials {app_name} {user_name} {password} created")
+      store_credentials(create_new_credentials(app_name,user_name,password)) #create and save new credentials
+      print("\n")
+      print(f"New Credentials {app_name} {user_name} {password} created")
+      print("\n")
+    
+    elif short_code == "dc":
+      if display_credentials():
+        print("Here is a list of all your credentials ")
         print("\n")
 
+        for credential in display_credentials():
+          print(f"{credential.app_name} {credential.user_name} {credential.password}")
+        print("\n")
+      else:
+        print("\n")
+        print("You don't seem to have any credentials saved yet")
+        print("\n")
 
 if __name__ == '__main__':
   main()
