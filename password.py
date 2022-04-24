@@ -6,3 +6,4 @@ class UserPasswordLockerAccount:
     self.app_name = app_name
     self.user_name = user_name
     self.password = password
+    
