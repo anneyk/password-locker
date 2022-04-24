@@ -16,5 +16,10 @@ class TestUserPasswordLockerAccount (unittest.TestCase):
     self.assertEqual(self.new_password_locker_account.user_name,"Hellen")
     self.assertEqual(self.new_password_locker_account.password, "myPassword")
 
+  def test_store_existing_account_credentials(self):
+    '''
+    test_store_existing_account_credentials test case to test if the password object is stored into the password_list
+    '''
+
 if __name__ == '__main__':
   unittest.main()
