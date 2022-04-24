@@ -1,4 +1,4 @@
-class UserPasswordLockerAccount:
+class Credentials:
   '''
   Class creates new instance of user password locker account class
   '''
@@ -6,4 +6,3 @@ class UserPasswordLockerAccount:
     self.app_name = app_name
     self.user_name = user_name
     self.password = password
-    
