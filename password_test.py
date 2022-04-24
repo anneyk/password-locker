@@ -15,6 +15,13 @@ class TestCredentials (unittest.TestCase):
     self.assertEqual(self.new_credentials.app_name,"Password-locker-account")
     self.assertEqual(self.new_credentials.user_name,"Hellen")
     self.assertEqual(self.new_credentials.password, "myPassword")
+  
+
+  def tearDown(self):
+    '''
+    tearDown method that does clean up after each test case has run.
+    '''
+    Credentials.credentials_list = [] #Empty the credentials_list
 
   def test_store_credentials(self):
     '''
@@ -22,7 +29,7 @@ class TestCredentials (unittest.TestCase):
     '''
     self.new_credentials.store_credentials() #store the new credentials
     self.assertEqual(len(Credentials.credentials_list),1)
-
+  
   def test_store_multiple_credentials(self):
     '''
     test_store_mutiple_credentials to check if we can store multiple credentials objects to our credentials_list
